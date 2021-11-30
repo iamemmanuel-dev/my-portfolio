@@ -19,6 +19,8 @@ html {
 
   --main_white: #fff;
   --main_black: #000;
+  /* --main_black: #000108; */
+  --main_black: #01030e;
   --main_black-light: #333;
   --main_color: #ef3f49;
   --main_color-light: #f04850ea;
@@ -45,6 +47,15 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+section {
+  padding-top: 10rem;
+}
+
+section .container {
+  border-bottom: 1px dotted #eee;
+  padding-bottom: 8rem;
 }
 
 .style_this {
@@ -224,10 +235,6 @@ ul {
   ABOUT SECTION
 */
 
-#about_section {
-  padding: 10rem 0;
-}
-
 .titleContainer {
   font-size: 2.4rem;
   font-family: var(--primary_font) !important;
@@ -244,6 +251,7 @@ ul {
   display: grid;
   grid-template-columns: 1.24fr 3fr;
   column-gap: 12rem;
+  margin-top: 2rem;
 }
 
 .col_1 {
@@ -303,4 +311,251 @@ ul {
   color: var(--main_color);
   font-weight: 300;
   font-size: 1.6rem;
+}
+/*
+  SKILLS SECTION
+*/
+
+/* #skills_section {
+  padding: 10rem 0;
+} */
+
+.skill_showcase_center {
+  margin: 3rem 0;
+}
+
+.skill_showcase-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+}
+
+.skillContainer {
+  margin: 4rem auto;
+}
+
+.skillBox:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.SkillTitle_Rate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.48rem;
+}
+
+.skill_title {
+  font-family: var(--secondary_font) !important;
+  font-weight: 700 !important;
+}
+
+.skillRateBar {
+  width: 100%;
+  height: 6px;
+  border-radius: 10rem;
+  position: relative;
+}
+
+.skillRateBar::after {
+  content: '';
+  display: grid;
+  place-items: center;
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--main_color-light);
+}
+
+.skillRateBar-html {
+  background: linear-gradient(
+    to right,
+    var(--main_color) 0%,
+    var(--main_color) 85%,
+    var(--main_white) 85%
+  );
+}
+
+.skillRateBar-html::after {
+  content: '85%';
+  top: -0.85rem;
+  right: 15%;
+}
+
+.skillRateBar-css {
+  background: linear-gradient(
+    to right,
+    var(--main_color) 0%,
+    var(--main_color) 75%,
+    var(--main_white) 75%
+  );
+}
+
+.skillRateBar-css::after {
+  content: '75%';
+  top: -0.85rem;
+  right: 25%;
+}
+
+.skillRateBar-js {
+  background: linear-gradient(
+    to right,
+    var(--main_color) 0%,
+    var(--main_color) 82%,
+    var(--main_white) 82%
+  );
+}
+
+.skillRateBar-js::after {
+  content: '82%';
+  top: -0.85rem;
+  right: 18%;
+}
+
+.skillRateBar-node {
+  background: linear-gradient(
+    to right,
+    var(--main_color) 0%,
+    var(--main_color) 75%,
+    var(--main_white) 75%
+  );
+}
+
+.skillRateBar-node::after {
+  content: '75%';
+  top: -0.85rem;
+  right: 25%;
+}
+
+.skillRateBar-git {
+  background: linear-gradient(
+    to right,
+    var(--main_color) 0%,
+    var(--main_color) 85%,
+    var(--main_white) 85%
+  );
+}
+
+.skillRateBar-git::after {
+  content: '85%';
+  top: -0.85rem;
+  right: 15%;
+}
+
+.skill_showcase_col-2 {
+  position: relative;
+}
+
+.circle_imageContainer {
+  width: 16rem;
+  height: 16rem;
+  display: flex;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 20%;
+  left: 35%;
+  animation: animateText 10s linear infinite;
+}
+
+.circle_imageContainer > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i) * calc(360deg / 4))) translateZ(10rem);
+}
+
+.info_row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 3rem;
+  background: rgba(51, 51, 51, 0.267);
+  padding-bottom: 1.5rem;
+}
+
+.info_col h2 {
+  font-size: 5rem;
+  font-weight: 500;
+  color: var(--main_color-light);
+}
+
+.info_col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.4;
+}
+
+.info_col h3 {
+  color: #eee;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+
+/*
+  SERVICES
+*/
+
+.services_row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.services_card {
+  background: rgba(51, 51, 51, 0.267);
+}
+
+.services_card-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_iconContainer {
+  margin-bottom: 1rem;
+}
+
+.card_iconContainer i {
+  font-size: 2.5rem;
+  color: var(--main_color);
+}
+
+.services_card-content h3 {
+  font-size: 2.25rem;
+  line-height: 2;
+}
+
+.services_card-content p {
+  text-align: center;
+  font-size: 1.46rem;
+}
+
+/*
+========================
+  ANIMATIONS
+========================
+*/
+
+@keyframes animateText {
+  0% {
+    transform: perspective(1000px) rotateY(360deg) rotateX(15deg)
+      translateY(-30px);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateY(0deg) rotateX(15deg)
+      translateY(-30px);
+  }
 }
