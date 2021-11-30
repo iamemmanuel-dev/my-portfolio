@@ -41,9 +41,9 @@
           </ul>
           <div class="followTextContainer flex-col">
             <h3>follow me</h3>
-            <div class="iconContainer">
+            <a href="https://github.com/iamemmanuel-dev" class="iconContainer">
               <i class="fab fa-github"></i>
-            </div>
+            </a>
           </div>
         </nav>
       </div>
@@ -112,7 +112,7 @@
               <div class="detail_col-2">
                 <div>
                   <h4>Phone:</h4>
-                  <p>(+234)813 7773 611</p>
+                  <p>(+234) 813 7773 611</p>
                 </div>
 
                 <div>
@@ -247,7 +247,7 @@
               <div class="card_iconContainer">
                 <i class="fas fa-code"></i>
               </div>
-              <h3><span class="style_this">Responsive</span> design</h3>
+              <h3><span class="style_this">Responsive</span> Design</h3>
               <p>
                 I create responsive web applications using modern solutions like
                 <span class="style_this">Grid</span> and
@@ -261,7 +261,7 @@
               <div class="card_iconContainer">
                 <i class="fas fa-code"></i>
               </div>
-              <h3><span class="style_this">Web-apps</span> development</h3>
+              <h3><span class="style_this">Web-apps</span> Development</h3>
               <p>
                 I create amazing web applications using the MongoDB as a
                 <span class="style_this">NO_SQL</span> database, React JS for
@@ -289,6 +289,90 @@
       </div>
     </section>
 
+    <section id="projects_showcase">
+      <div class="container">
+        <div class="titleContainer">
+          <h2>Recent Projects</h2>
+          <div class="underline">
+            <span id="circle_1"></span>
+            <span id="circle_2"></span>
+          </div>
+        </div>
+
+        <div class="projects_row">
+          <div class="project_container">
+            <div class="project_style"></div>
+            <div class="project_info">
+              <h3>E-commerce online shop</h3>
+              <a
+                href="https://myreactonlinestore.netlify.app"
+                target="_blank"
+                class="project_link"
+                >https://myreactonlinestore.netlify.app</a
+              >
+              <a
+                href="https://github.com/iamemmanuel-dev/online-store"
+                target="_blank"
+                class="github_link"
+              >
+                <i class="fab fa-github"></i>
+                see on github
+              </a>
+            </div>
+          </div>
+
+          <div class="project_container">
+            <div class="project_style"></div>
+            <div class="project_info">
+              <h3>A restaurant website</h3>
+              <a
+                href="https://myrestaurantoproject.netlify.app"
+                target="_blank"
+                class="project_link"
+                >https://myrestaurantoproject.netlify.app</a
+              >
+              <a
+                href="https://github.com/iamemmanuel-dev/restaurant-project"
+                target="_blank"
+                class="github_link"
+              >
+                <i class="fab fa-github"></i>
+                see on github
+              </a>
+            </div>
+          </div>
+
+          <div class="project_container">
+            <div class="project_style"></div>
+            <div class="project_info">
+              <h3>Airsoft company's website</h3>
+              <a
+                href="https://airsoftstudios.com"
+                target="_blank"
+                class="project_link"
+                >https://airsoftstudios.com</a
+              >
+              <a
+                href="https://github.com/iamemmanuel-dev/airsoftstudios"
+                target="_blank"
+                class="github_link"
+              >
+                <i class="fab fa-github"></i>
+                see on github
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="scrollBtn">
+      <i class="fas fa-chevron-up"></i>
+    </div>
+    <footer>
+      <p>&copy;Ademola Emmanuel</p>
+    </footer>
+
     <script>
       document
         .querySelector('.navToggleIconContainer')
@@ -297,6 +381,21 @@
             .querySelector('.main_header-col1')
             .classList.toggle('toggleNav')
         })
+
+      const btn = document.querySelector('.scrollBtn')
+      window.addEventListener('scroll', e => {
+        if (e.currentTarget.pageYOffset > 1205) {
+          btn.classList.add('showScrollBtn')
+        } else {
+          btn.classList.remove('showScrollBtn')
+        }
+      })
+
+      btn.addEventListener('click', e => {
+        document
+          .querySelector('#main_header')
+          .scrollIntoView({ behavior: 'smooth' })
+      })
     </script>
   </body>
 </html>
