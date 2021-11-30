@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+
+:root {
+  --primary_font: 'Ubuntu', sans-serif;
+  --secondary_font: 'Poppins', sans-serif;
+
+  --main_white: #fff;
+  --dark_gold: #b48b2d;
+  --light_gold: #faef93;
+}
+
+body {
+  font-family: var(--primary_font);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--secondary_font);
+}
