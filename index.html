@@ -14,5 +14,133 @@
     />
     <title>My portfolio</title>
   </head>
-  <body></body>
+  <body>
+    <header id="main_header">
+      <div class="main_header-col1">
+        <nav class="flex-col navbar">
+          <div class="main_header-logoContainer">
+            <img src="/images/logo.jpg" alt="logo" class="logo" />
+          </div>
+          <ul class="main_header-ul flex-col">
+            <li class="main_header-listitems">
+              <a href="#" class="main_header-link">Home</a>
+            </li>
+            <li class="main_header-listitems">
+              <a href="#" class="main_header-link">About</a>
+            </li>
+            <li class="main_header-listitems">
+              <a href="#" class="main_header-link">Skills</a>
+            </li>
+            <li class="main_header-listitems">
+              <a href="#" class="main_header-link">Project</a>
+            </li>
+
+            <li class="main_header-listitems">
+              <a href="#" class="main_header-link">Experience</a>
+            </li>
+          </ul>
+          <div class="followTextContainer flex-col">
+            <h3>follow me</h3>
+            <div class="iconContainer">
+              <i class="fab fa-github"></i>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="main_header-col2">
+        <div class="navToggleIconContainer">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="main_header_col2-content">
+          <small>Hello</small>
+          <h1>i'm Emmanuel</h1>
+          <p>
+            full stack MongoDB, Express, React and Node JS
+            <span class="style_this" style="font-weight: 500"> Developer</span>
+          </p>
+          <a href="" class="cvBtn">Download CV</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="about_section">
+      <div class="container">
+        <div class="titleContainer">
+          <h2>About me</h2>
+          <div class="underline">
+            <span id="circle_1"></span>
+            <span id="circle_2"></span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col_1">
+            <div class="aboutImgContainer aboutImgContainer-1">
+              <img src="/images/bg3.jpg" alt="image" />
+            </div>
+            <div class="aboutImgContainer aboutImgContainer-2">
+              <img src="/images/person.jpeg" alt="image" />
+            </div>
+          </div>
+          <div class="col_2">
+            <h3>Ademola Emmanuel</h3>
+            <small><span class="style_this">Full-stack</span> engineer</small>
+            <p>
+              I am a reliable, focused, and result-oriented full-Stack Web
+              developer, with a passion for developing and designing a dynamic
+              and interactive user-friendly interface that ensured high traffic,
+              increased page views, and beautiful user experience.
+            </p>
+
+            <div class="detail_row">
+              <div class="detail_col-1">
+                <div>
+                  <h4>Name:</h4>
+                  <p>Ademola Emmanuel</p>
+                </div>
+
+                <div>
+                  <h4>Birthday:</h4>
+                  <p>6th september, 1998</p>
+                </div>
+
+                <div>
+                  <h4>Age:</h4>
+                  <p>23</p>
+                </div>
+              </div>
+              <div class="detail_col-2">
+                <div>
+                  <h4>Phone:</h4>
+                  <p>(+234)813 7773 611</p>
+                </div>
+
+                <div>
+                  <h4>Email:</h4>
+                  <p>emmanuelademola20@gmail.com</p>
+                </div>
+
+                <div>
+                  <h4>Freelance:</h4>
+                  <p>available</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <a href="#" class="hireBtn">Hire me</a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document
+        .querySelector('.navToggleIconContainer')
+        .addEventListener('click', () => {
+          document
+            .querySelector('.main_header-col1')
+            .classList.toggle('toggleNav')
+        })
+    </script>
+  </body>
 </html>
