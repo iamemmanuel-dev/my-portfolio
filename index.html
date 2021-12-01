@@ -26,22 +26,34 @@
               <a href="#" class="main_header-link">Home</a>
             </li>
             <li class="main_header-listitems">
-              <a href="#" class="main_header-link">About</a>
+              <a href="#" class="main_header-link" data-id="about_section"
+                >About</a
+              >
             </li>
             <li class="main_header-listitems">
-              <a href="#" class="main_header-link">Skills</a>
+              <a href="#" class="main_header-link" data-id="skills_section"
+                >Skills</a
+              >
             </li>
             <li class="main_header-listitems">
-              <a href="#" class="main_header-link">Project</a>
+              <a href="#" class="main_header-link" data-id="services_section"
+                >Services</a
+              >
             </li>
 
             <li class="main_header-listitems">
-              <a href="#" class="main_header-link">Experience</a>
+              <a href="#" class="main_header-link" data-id="projects_section"
+                >Projects</a
+              >
             </li>
           </ul>
           <div class="followTextContainer flex-col">
             <h3>follow me</h3>
-            <a href="https://github.com/iamemmanuel-dev" class="iconContainer">
+            <a
+              href="https://github.com/iamemmanuel-dev"
+              target="_blank"
+              class="iconContainer"
+            >
               <i class="fab fa-github"></i>
             </a>
           </div>
@@ -289,7 +301,7 @@
       </div>
     </section>
 
-    <section id="projects_showcase">
+    <section id="projects_section">
       <div class="container">
         <div class="titleContainer">
           <h2>Recent Projects</h2>
@@ -395,6 +407,14 @@
         document
           .querySelector('#main_header')
           .scrollIntoView({ behavior: 'smooth' })
+      })
+
+      document.querySelectorAll('.main_header-link').forEach(el => {
+        const { id } = el.dataset
+        el.addEventListener('click', e => {
+          e.preventDefault()
+          document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+        })
       })
     </script>
   </body>

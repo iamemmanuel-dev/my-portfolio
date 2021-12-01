@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
 
 *,
@@ -15,7 +14,6 @@ html {
 
 :root {
   --primary_font: 'Ubuntu', sans-serif;
-  --secondary_font: 'Poppins', sans-serif;
 
   --main_white: #fff;
   --main_black: #000;
@@ -30,6 +28,11 @@ html {
   --max_width: 90rem;
 
   --transition: all 0.3s ease-in-out;
+}
+
+::selection {
+  background: var(--main_color);
+  color: var(--main_white);
 }
 
 section:nth-child(odd) {
@@ -108,7 +111,6 @@ section .container {
 }
 
 .main_header-col1 {
-  background: var(--main_black-light);
   background: var(--main_black);
   width: 20rem;
   padding: 1.5rem;
@@ -146,6 +148,10 @@ section .container {
 }
 
 .main_header-link:hover {
+  color: var(--main_color);
+}
+
+.main_header-link:active {
   color: var(--main_color);
 }
 
@@ -246,7 +252,6 @@ section .container {
 
 .titleContainer {
   font-size: 2.4rem;
-  font-family: var(--primary_font) !important;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -321,13 +326,10 @@ section .container {
   font-weight: 300;
   font-size: 1.6rem;
 }
+
 /*
   SKILLS SECTION
 */
-
-/* #skills_section {
-  padding: 10rem 0;
-} */
 
 .skill_showcase_center {
   margin: 3rem 0;
@@ -544,7 +546,9 @@ section .container {
 
 .services_card-content h3 {
   font-size: 2.25rem;
-  line-height: 2;
+  line-height: 1.3;
+  margin-bottom: 1.6rem;
+  text-align: center;
 }
 
 .services_card-content p {
@@ -616,7 +620,7 @@ FOOTER
 */
 
 footer {
-  height: 25vh;
+  height: 15vh;
   display: grid;
   place-items: center;
   font-size: 1.78rem;
@@ -659,5 +663,206 @@ footer {
   100% {
     transform: perspective(1000px) rotateY(0deg) rotateX(15deg)
       translateY(-30px);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  /*
+  GENERAL 
+*/
+  section {
+    padding-top: 6rem;
+  }
+
+  section .container {
+    padding-bottom: 5rem;
+  }
+
+  #main_header {
+    height: 55vh;
+  }
+
+  .main_header-col1 {
+    padding: 1rem;
+    left: -100%;
+  }
+
+  .toggleNav {
+    left: 0;
+  }
+
+  .main_header_col2-content {
+    margin-top: 5rem;
+  }
+
+  .main_header_col2-content h1 {
+    font-size: 3rem;
+  }
+
+  .cvBtn {
+    padding: 0.6rem 1rem;
+    font-size: 1.4rem;
+  }
+
+  .navToggleIconContainer {
+    left: 80%;
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+  }
+
+  /*
+  ABOUT SECTION
+*/
+
+  .titleContainer {
+    font-size: 1.8rem;
+    /* font-size: 1.6rem; */
+  }
+
+  .titleContainer h2 {
+    line-height: 0.9;
+  }
+
+  .row {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 0;
+    margin-top: 2rem;
+  }
+
+  .col_1 {
+    display: none;
+  }
+
+  .col_2 h3 {
+    font-size: 2rem;
+  }
+
+  .col_2 small {
+    font-size: 1.4rem;
+  }
+
+  .col_2 p:not(.detail_row p) {
+    font-size: 1.45rem;
+    margin-top: 2rem;
+  }
+
+  .detail_row {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1rem;
+  }
+
+  .detail_col-1 > div,
+  .detail_col-2 > div {
+    display: flex;
+    align-items: center;
+    line-height: 2.5;
+  }
+
+  .detail_row h4 {
+    font-size: 1.46rem;
+  }
+
+  /*
+  SKILLS SECTION
+*/
+
+  .skill_showcase_center {
+    margin: 3rem 0;
+  }
+
+  .skill_showcase-row {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .skillContainer {
+    margin: 1rem auto;
+  }
+
+  .skillBox:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  .skill_showcase_col-2 {
+    position: relative;
+    order: -1;
+    margin-bottom: 7rem;
+    margin-top: 6rem;
+  }
+
+  .circle_imageContainer {
+    width: 10rem;
+    height: 10rem;
+  }
+
+  .info_row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .info_col h2 {
+    font-size: 3rem;
+  }
+
+  .info_col h3 {
+    letter-spacing: 0px;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
+  /*
+  SERVICES
+*/
+
+  .services_row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card_iconContainer i {
+    font-size: 2rem;
+  }
+
+  .services_card-content h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  /*
+  PROJECTS SHOWCASE
+*/
+
+  .project_container {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .navToggleIconContainer {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+  }
+
+  .project_container {
+    margin-bottom: 3rem;
+  }
+
+  .detail_row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+  }
+
+  .detail_col-1 {
+    flex: 1;
   }
 }
