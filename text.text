@@ -1,0 +1,46 @@
+@media screen and (max-width: 720px) {
+  
+  
+
+  
+
+ 
+ 
+
+  /*
+  PROJECTS SHOWCASE
+*/
+
+  .project_container {
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .navToggleIconContainer {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+  }
+
+  .project_container {
+    margin-bottom: 3rem;
+  }
+
+  .detail_row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+  }
+
+  .detail_col-1 {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  html {
+    font-size: 50%;
+  }
+}
