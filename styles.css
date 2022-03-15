@@ -313,7 +313,7 @@ section .container_L {
 }
 
 .col_2 p {
-  font-size: 1.56rem;
+  font-size: 1.8rem;
 }
 
 .detail_row {
@@ -370,7 +370,8 @@ section .container_L {
 
 .skill_title {
   font-family: var(--secondary_font) !important;
-  font-weight: 700 !important;
+  font-weight: 400 !important;
+  font-size: 1.7rem;
 }
 
 .skillRateBar {
@@ -472,6 +473,22 @@ section .container_L {
   background: linear-gradient(to right, #ec4b26 0%, #ec4b26 50%, #000 50%);
 }
 
+.skillRateBar-bubble {
+  background: linear-gradient(
+    to right,
+    var(--main_color) 0%,
+    var(--main_color) 90%,
+    var(--main_white) 90%
+  );
+}
+
+.skillRateBar-bubble::after {
+  content: '90%';
+  top: -0.85rem;
+  right: 14.6%;
+  background: linear-gradient(to right, #ec4b26 0%, #ec4b26 50%, #000 50%);
+}
+
 .skill_showcase_col-2 {
   position: relative;
 }
@@ -538,18 +555,20 @@ section .container_L {
 */
 
 .services_row {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .services_card {
+  flex-basis: 45%;
   background: rgba(51, 51, 51, 0.212);
 }
 
 .services_card-content {
-  padding: 2rem;
+  padding: 2.25rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -574,7 +593,7 @@ section .container_L {
 
 .services_card-content p {
   text-align: center;
-  font-size: 1.46rem;
+  font-size: 1.6rem;
 }
 
 /*
@@ -666,7 +685,7 @@ section .container_L {
 }
 
 .projects_detail_desc p {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .projects_detail_techContainer {
@@ -684,7 +703,7 @@ section .container_L {
   /* justify-content: center; */
   flex-wrap: wrap;
   row-gap: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
   white-space: nowrap;
 }
 
@@ -1142,11 +1161,8 @@ footer {
   SERVICES
 */
 
-  .services_row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  .services_card {
+    flex-basis: 100%;
   }
 
   .card_iconContainer i {
